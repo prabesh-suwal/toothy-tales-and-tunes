@@ -82,7 +82,7 @@
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14; /* Reduced padding from py-20 to py-14 */
   }
   
   .section-title {
@@ -90,7 +90,7 @@
   }
   
   .section-subtitle {
-    @apply text-xl text-muted-foreground mb-12 max-w-3xl;
+    @apply text-xl text-muted-foreground mb-8 max-w-3xl; /* Reduced margin-bottom from mb-12 to mb-8 */
   }
   
   .btn-primary {

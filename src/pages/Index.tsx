@@ -41,12 +41,14 @@ const Index = () => {
     <div className="flex flex-col min-h-screen overflow-hidden">
       <Navbar />
       <Hero />
-      <About />
-      <Services />
-      <Achievements />
-      <CreativeWorks />
-      <Blog />
-      <Contact />
+      <div className="space-y-12"> {/* Added a container with reduced spacing */}
+        <About />
+        <Services />
+        <Achievements />
+        <CreativeWorks />
+        <Blog />
+        <Contact />
+      </div>
       <Footer />
     </div>
   );

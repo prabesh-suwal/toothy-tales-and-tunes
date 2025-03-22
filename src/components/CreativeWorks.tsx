@@ -66,17 +66,17 @@ const CreativeWorks: React.FC = () => {
   };
 
   return (
-    <section id="creative" className="relative py-24 bg-white">
+    <section id="creative" className="relative py-16 bg-white"> {/* Reduced padding from py-24 to py-16 */}
       <div className="dental-blob bg-dental-cream/60 w-[300px] h-[300px] rounded-full -left-[100px] top-[20%]"></div>
       
       <div className="section-container relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12"> {/* Reduced margin from mb-16 to mb-12 */}
           <h2 className="section-title">Creative Works</h2>
           <p className="section-subtitle mx-auto">Explore my collection of dental-themed creative writings that make oral health education engaging for children.</p>
         </div>
         
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-8"> {/* Reduced margin from mb-12 to mb-8 */}
           {(['poems', 'songs', 'stories'] as const).map((tab) => (
             <button
               key={tab}
@@ -94,22 +94,22 @@ const CreativeWorks: React.FC = () => {
         </div>
         
         {/* Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {/* Reduced gap from gap-8 to gap-6 */}
           {creativeWorks[activeTab].map((work, index) => (
             <div 
               key={index}
               className="dental-card overflow-hidden group animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="h-40 bg-gradient-to-r from-dental-blue to-dental-light-blue flex items-center justify-center p-8">
+              <div className="h-36 bg-gradient-to-r from-dental-blue to-dental-light-blue flex items-center justify-center p-8"> {/* Reduced height from h-40 to h-36 */}
                 <div className="text-4xl text-white font-serif font-bold">{work.title.charAt(0)}</div>
               </div>
-              <div className="p-6">
-                <span className="inline-block px-3 py-1 rounded-full bg-dental-mint text-dental-blue text-xs font-medium mb-3">
+              <div className="p-5"> {/* Reduced padding from p-6 to p-5 */}
+                <span className="inline-block px-3 py-1 rounded-full bg-dental-mint text-dental-blue text-xs font-medium mb-2"> {/* Reduced margin from mb-3 to mb-2 */}
                   {activeTab.charAt(0).toUpperCase() + activeTab.slice(1, -1)}
                 </span>
-                <h3 className="text-xl font-bold mb-3">{work.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">{work.excerpt}</p>
+                <h3 className="text-xl font-bold mb-2">{work.title}</h3> {/* Reduced margin from mb-3 to mb-2 */}
+                <p className="text-muted-foreground text-sm mb-3">{work.excerpt}</p> {/* Reduced margin from mb-4 to mb-3 */}
                 <div className="flex justify-between items-center">
                   <span className="text-xs text-muted-foreground">{work.date}</span>
                   <button className="flex items-center text-dental-blue hover:text-opacity-80 text-sm font-medium transition-all">
@@ -122,7 +122,7 @@ const CreativeWorks: React.FC = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center"> {/* Reduced margin from mt-16 to mt-12 */}
           <a href="#" className="btn-primary">View All Works</a>
         </div>
       </div>
