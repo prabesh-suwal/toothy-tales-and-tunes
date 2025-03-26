@@ -11,13 +11,15 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/toothy-tales-and-tunes/', 
+  base: "/toothy-tales-and-tunes/", // Ensure correct base path
+  build: {
+    outDir: "dist", // Ensure output is in 'dist' folder
+  },
 }));
